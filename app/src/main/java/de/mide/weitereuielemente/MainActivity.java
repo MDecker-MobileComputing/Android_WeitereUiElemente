@@ -28,6 +28,7 @@ public class MainActivity extends Activity
                                      SeekBar.OnSeekBarChangeListener {
 
     protected ToggleButton _toggleButton = null;
+
     protected ProgressBar  _progressBar  = null;
 
 
