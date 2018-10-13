@@ -17,7 +17,7 @@ import android.widget.ToggleButton;
 
 /**
  * App zur Einführung einer Reihe weiterer UI-Elemente.
- * <br/><br/>
+ * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
@@ -27,8 +27,10 @@ public class MainActivity extends Activity
                                      CompoundButton.OnCheckedChangeListener,
                                      SeekBar.OnSeekBarChangeListener {
 
+    /** Referenz auf Schalter mit Status. */
     protected ToggleButton _toggleButton = null;
 
+    /** Referenz auf "Fortschrittsanzeige". */
     protected ProgressBar  _progressBar  = null;
 
 
@@ -70,7 +72,7 @@ public class MainActivity extends Activity
 
 
     /**
-     * Event-Handler-Methode für den ToggleButton.<br/>
+     * Event-Handler-Methode für den ToggleButton.<br>
      * Einzige Methode aus dem Interface {@link android.view.View.OnClickListener}.
      *
      * @param view UI-Element, welches das Event ausgelöst hat.
@@ -93,6 +95,7 @@ public class MainActivity extends Activity
      * Gibt Text des gewählten RadioButtons in einem Toast aus.
      *
      * @param group      RadioGroup-Instanz, in der ein RadioButton das Event ausgelöst hat.
+     *
      * @param checkedId  ID des UI-Elements (RadioButton), welches das Event ausgelöst hat.
      */
     @Override
@@ -109,10 +112,11 @@ public class MainActivity extends Activity
 
 
     /**
-     * Event-Handler-Methode für CheckBoxen.<br/>
+     * Event-Handler-Methode für CheckBoxen.<br>
      * Einzige Methode aus dem Interface {@link CompoundButton.OnCheckedChangeListener}.
      *
      * @param buttonView CheckBox die Event ausgelöst hat.
+     *
      * @param isChecked  Ist die CheckBox jetzt aktiviert oder nicht?
      */
     @Override
@@ -129,7 +133,14 @@ public class MainActivity extends Activity
 
     /**
      * Methode aus Interface {@link android.widget.SeekBar.OnSeekBarChangeListener}.
-     * Absichtlich leer gelassen.
+     * Absichtlich leer überschrieben.
+     *
+     * @param seekBar UI-Element, das Event ausgelöst hast.
+     *
+     * @param progress Neuer Wert
+     *
+     * @param fromUser <i>true</i> wenn die Änderung von einem Nutzer verursacht
+     *                 wurde.
      */
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -139,7 +150,9 @@ public class MainActivity extends Activity
 
     /**
      * Methode aus Interface {@link android.widget.SeekBar.OnSeekBarChangeListener}.
-     * Absichtlich leer gelassen.
+     * Absichtlich leer überschrieben.
+     *
+     * @param seekBar UI-Element, das Event ausgelöst hast.
      */
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
@@ -151,9 +164,14 @@ public class MainActivity extends Activity
      * Methode aus Interface {@link android.widget.SeekBar.OnSeekBarChangeListener}.
      * Wird aufgerufen, wenn das Einstellen eines neuen Wertes beendet ist, der Finger
      * also vom SeekBar-Element wieder abhoben wurde.
+     * Einzige Event-Handler-Methode für das SeekBar-Element, die wirklich überschrieben
+     * wurde.
+     *
+     * @param seekBar UI-Element, das Event ausgelöst hast.
      */
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
+
         int neuerWert = seekBar.getProgress();
 
         Toast.makeText(
