@@ -39,6 +39,7 @@ public class MainActivity extends Activity
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -144,6 +145,7 @@ public class MainActivity extends Activity
      */
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
       // absichtlich leer gelassen
     }
 
@@ -156,6 +158,7 @@ public class MainActivity extends Activity
      */
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
+
         // absichtlich leer gelassen
     }
 

@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">WeitereUiElemente</string>
 
-    <string name="radiobutton_ja"   >Ja</string>
-    <string name="radiobutton_nein" >Nein</string>
-    <string name="radiobutton_ka"   >Keine Angabe</string>
+    <string name="app_name">Weitere UI-Elemente</string>
+
+    <string name="radiobutton_ja"  >Ja</string>
+    <string name="radiobutton_nein">Nein</string>
+    <string name="radiobutton_ka"  >Keine Angabe</string>
 
     <string name="checkbox_1">Option 1</string>
     <string name="checkbox_2">Option 2</string>
