@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
-
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "de.mide.weitereuielemente"
         minSdkVersion 17
-        targetSdkVersion 28
-        versionCode 2
-        versionName "1.1 (September 2018)"
+        targetSdkVersion 29
+        versionCode 3
+        versionName "1.2 (September 2019)"
     }
     buildTypes {
         release {
