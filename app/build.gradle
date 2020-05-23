@@ -7,8 +7,6 @@ android {
         applicationId "de.mide.weitereuielemente"
         minSdkVersion 17
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.2 (September 2019)"
     }
     buildTypes {
         release {
