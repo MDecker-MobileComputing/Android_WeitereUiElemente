@@ -1,9 +1,10 @@
 package de.mide.weitereuielemente;
 
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
@@ -18,6 +19,9 @@ import android.widget.TextView;
 public class FarbwahlActivity extends Activity
                               implements OnSeekBarChangeListener {
 
+    /** Alpha-Wert (Transparenz) für Farbe; 0xff=255 entspricht voller Deckkraft. */
+    private static final int ALPHA_WERT = 0xff;
+
     /** Schieberegler für Einstellung Rotanteil. */
     private SeekBar _rotSeekBar = null;
 
@@ -29,6 +33,13 @@ public class FarbwahlActivity extends Activity
 
     /** Textfeld zur Darstellung der aktuell ausgewählten Farbe. */
     private TextView _farbTextView = null;
+
+    /**
+     * Wenn diese CheckBox ausgewählt ist, dann wird die Farbe aktualisiert, auch
+     * wenn die Touch-Geste zum verschieben des Schiebereglers noch nicht beendet
+     * ist.
+     */
+    private CheckBox _farbeAktualisierenCheckbox = null;
 
 
     /**
@@ -48,16 +59,21 @@ public class FarbwahlActivity extends Activity
 
         _farbTextView = findViewById(R.id.farbTextView);
 
+        _farbeAktualisierenCheckbox = findViewById(R.id.farbeLiveAktualisierenCheckbox);
+
         _rotSeekBar.setOnSeekBarChangeListener(   this );
         _gruenSeekBar.setOnSeekBarChangeListener( this );
         _blauSeekBar.setOnSeekBarChangeListener(  this );
 
+
         farbeDarstellen();
     }
 
-    
+
     /**
-     * Methode stellt aktuell ausgewählten Farbwert dar.
+     * Methode stellt aktuell ausgewählten Farbwert dar: Das TextView-Element bekommt die
+     * entsprechende Hintergrundfarbe, und der Farbcode (Hex-Zahl) im TextView-Element wird
+     * entsprechend dargestellt.
      */
     private void farbeDarstellen() {
 
@@ -65,12 +81,21 @@ public class FarbwahlActivity extends Activity
         int gruen = _gruenSeekBar.getProgress();
         int blau  = _blauSeekBar.getProgress();
 
-        _farbTextView.setBackgroundColor(0x80FFFF00);
+        // Formel nach https://developer.android.com/reference/android/graphics/Color
+        int farbe = (ALPHA_WERT & 0xff) << 24 | (rot & 0xff) << 16 | (gruen & 0xff) << 8 | (blau & 0xff);
+
+        _farbTextView.setBackgroundColor(farbe);
+
+        String hexString = String.format("0x%08X", farbe);
+        _farbTextView.setText(hexString);
     }
 
 
     /**
-     * Eine der drei Methoden aus dem Interface {@link OnSeekBarChangeListener}.
+     * Eine der drei Methoden aus dem Interface {@link OnSeekBarChangeListener}; sie wird
+     * bei jeder Änderung des Schieberegler-Wertes während der Touch-Geste aufgerufen.
+     * Wenn es sich um ein vom Nutzer ausgelöstes Event handelt und die Live-Aktualisierung
+     * in der CheckBox eingeschaltet ist, dann wird die Farbe aktualisiert.
      *
      * @param seekBar  SeekBar-Element, welches das Eventa ausgelöst hat.
      *
@@ -82,6 +107,12 @@ public class FarbwahlActivity extends Activity
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
+        if (fromUser == false) { return; }
+
+        if ( _farbeAktualisierenCheckbox.isChecked() == true ) {
+
+            farbeDarstellen();
+        }
     }
 
 
@@ -94,6 +125,7 @@ public class FarbwahlActivity extends Activity
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
 
+        // absichtlich leer gelassen
     }
 
 

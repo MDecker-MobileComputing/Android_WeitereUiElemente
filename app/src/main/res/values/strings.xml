@@ -58,5 +58,10 @@
     <!-- Text für FarbwahlActivity -->
     <string name="title_farbwahl">Farbwahl</string>
 
+    <string name="label_rot"  >Rot:</string>
+    <string name="label_gruen">Grün:</string>
+    <string name="label_blau" >Blau:</string>
+
+    <string name="checkbox_live_aktualisieren">Farbe live aktualisieren</string>
 
 </resources>

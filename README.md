@@ -17,6 +17,8 @@ Identifiers (names for classes, variables and methods), UI texts and (JavaDoc) c
 
 ![Screenshot 5](screenshot_5.png)
 
+![Screenshot 6](screenshot_6.png)
+
 <br>
 
 ----

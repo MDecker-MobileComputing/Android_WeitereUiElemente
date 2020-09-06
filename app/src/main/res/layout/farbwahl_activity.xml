@@ -9,6 +9,11 @@
     tools:context=".FarbwahlActivity" >
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_rot"
+        android:textStyle="bold" />
     <SeekBar
         android:id="@+id/rotSeekBar"
         android:layout_width="match_parent"
@@ -16,6 +21,12 @@
         android:max="255"
         android:progress="255" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/label_gruen"
+        android:textStyle="bold" />
     <SeekBar
         android:id="@+id/gruenSeekBar"
         android:layout_width="match_parent"
@@ -23,6 +34,12 @@
         android:max="255"
         android:progress="255" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/label_blau"
+        android:textStyle="bold" />
     <SeekBar
         android:id="@+id/blueSeekBar"
         android:layout_width="match_parent"
@@ -34,9 +51,19 @@
         android:id="@+id/farbTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:gravity="center_horizontal"
-        android:text="#FFFF00" />
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="#FFFF00"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/farbeLiveAktualisierenCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/checkbox_live_aktualisieren"
+        android:checked="false" />
 
 </LinearLayout>

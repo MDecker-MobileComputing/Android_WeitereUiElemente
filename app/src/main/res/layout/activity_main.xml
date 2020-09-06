@@ -13,27 +13,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/button_gehe_zu_toggle_activity" />
+        android:text="@string/button_gehe_zu_toggle_activity"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/gehe_zu_single_choice_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/button_gehe_zu_single_choice" />
+        android:text="@string/button_gehe_zu_single_choice"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/gehe_zu_multi_choice_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/button_gehe_zu_multi_choice" />
+        android:text="@string/button_gehe_zu_multi_choice"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/gehe_zu_farbwahl_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="@string/button_gehe_zu_farbwahl" />
+        android:text="@string/button_gehe_zu_farbwahl"
+        android:textSize="20sp" />
 
 </LinearLayout>
