@@ -1,41 +1,41 @@
 package de.mide.weitereuielemente;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.SeekBar;
+import android.widget.Button;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 
 /**
- * App zur Einführung einer Reihe weiterer UI-Elemente.
+ * Activity mit Hauptmenü zum Absprung zu anderen Activities.
  * <br><br>
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class MainActivity extends Activity
-                          implements OnClickListener,
-                                     RadioGroup.OnCheckedChangeListener,
-                                     CompoundButton.OnCheckedChangeListener,
-                                     SeekBar.OnSeekBarChangeListener {
+                          implements OnClickListener {
 
-    /** Referenz auf Schalter mit Status. */
-    protected ToggleButton _toggleButton = null;
+    /** Button für Navigation zu ToggleButtonActivity. */
+    private Button _geheZuToggleActivityButton = null;
 
-    /** Referenz auf "Fortschrittsanzeige". */
-    protected ProgressBar  _progressBar  = null;
+    /** Button für Navigation zu SingleChoiceActivity (Demo RadioButtons). */
+    private Button _geheZuSingleChoiceActivityButton = null;
+
+    /** Button für Navigation zu MultiChoiceActivity (Demo Checkboxes). */
+    private Button _geheZuMultipleChoiceActivityButton = null;
+
+    /** Button für Navigation zur FarbwahlActivity. */
+    private Button _geheZuFarbwahlButton = null;
+
+    /** Flag, damit Toast mit Hinweis zur Rücknavigation nur einmal pro App-Lauf angezeigt wird. */
+    private boolean _hinweisWurdeGezeigt = false;
 
 
     /**
-     * Lifecycle-Methode; setzt Event-Handler für die UI-Elemente.
+     * Lifecycle-Methode zur Initialisierung des Activity-Objekts.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,144 +43,65 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SeekBar seekBar = findViewById(R.id.seekBar);
-        seekBar.setOnSeekBarChangeListener(this);
+        _geheZuToggleActivityButton         = findViewById(R.id.gehe_zu_toggle_activity_button);
+        _geheZuSingleChoiceActivityButton   = findViewById(R.id.gehe_zu_single_choice_button  );
+        _geheZuMultipleChoiceActivityButton = findViewById(R.id.gehe_zu_multi_choice_button   );
+        _geheZuFarbwahlButton               = findViewById(R.id.gehe_zu_farbwahl_button       );
 
-        CheckBox checkbox1 = findViewById(R.id.checkbox_1);
-        checkbox1.setOnCheckedChangeListener(this);
-
-        CheckBox checkbox2 = findViewById(R.id.checkbox_2);
-        checkbox2.setOnCheckedChangeListener(this);
-
-        RadioGroup radioGroup = findViewById(R.id.radio_group_mit_drei_buttons);
-        radioGroup.setOnCheckedChangeListener(this);
-
-        _toggleButton = findViewById(R.id.toggleButton);
-        _toggleButton.setOnClickListener(this);
-
-        _progressBar = findViewById(R.id.progressBar);
-
-
-        if ( _toggleButton.isChecked() ) {
-
-            _progressBar.setVisibility( View.VISIBLE );
-
-        } else {
-
-            _progressBar.setVisibility( View.INVISIBLE );
-        }
+        _geheZuToggleActivityButton.setOnClickListener(         this );
+        _geheZuSingleChoiceActivityButton.setOnClickListener(   this );
+        _geheZuMultipleChoiceActivityButton.setOnClickListener( this );
+        _geheZuFarbwahlButton.setOnClickListener(               this );
     }
 
 
     /**
-     * Event-Handler-Methode für den ToggleButton.<br>
-     * Einzige Methode aus dem Interface {@link android.view.View.OnClickListener}.
+     * Event-Handler für Button, springt zu einer anderen Activity.
+     * Beim ersten Aufruf pro App-Start wird in einem Toast ein Hinweis zur Rücknavigation
+     * angezeigt.
      *
-     * @param view UI-Element, welches das Event ausgelöst hat.
+     * @param view  Button, der das Event ausgelöst hat.
      */
     @Override
     public void onClick(View view) {
 
-        if ( _toggleButton.isChecked() ) {
-            _progressBar.setVisibility(View.VISIBLE);
-        } else {
-            _progressBar.setVisibility(View.INVISIBLE);
+        Intent intent = null;
+
+        if (view == _geheZuToggleActivityButton) {
+
+            intent = new Intent(this, ToggleButtonActivity.class);
+            startActivity(intent);
+
         }
-    }
+        else if (view == _geheZuSingleChoiceActivityButton) {
+
+            intent = new Intent(this, SingeChoiceActivity.class);
+            startActivity(intent);
+
+        }
+        else if (view == _geheZuMultipleChoiceActivityButton) {
+
+            intent = new Intent(this, MultiChoiceActivity.class);
+            startActivity(intent);
+
+        }
+        else if (view == _geheZuFarbwahlButton) {
+
+            intent = new Intent(this, FarbwahlActivity.class);
+            startActivity(intent);
+
+        } else {
+
+            Toast.makeText(this, R.string.hinweis_unerwarteter_button, Toast.LENGTH_LONG).show();
+            return;
+        }
 
 
-    /**
-     * Event-Handler-Methode für RadioGroup
-     * (Überschreibung der einzigen Methode aus dem Interface
-     * {@link RadioGroup.OnCheckedChangeListener}).
-     * Gibt Text des gewählten RadioButtons in einem Toast aus.
-     *
-     * @param group      RadioGroup-Instanz, in der ein RadioButton das Event ausgelöst hat.
-     *
-     * @param checkedId  ID des UI-Elements (RadioButton), welches das Event ausgelöst hat.
-     */
-    @Override
-    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        if (_hinweisWurdeGezeigt == false) {
 
-        RadioButton radioButton = findViewById(checkedId);
-
-        String radioButtonText = radioButton.getText().toString();
-        String toastText       = "RadioButton \"" + radioButtonText + "\" gewählt";
-
-        Toast brot = Toast.makeText(this, toastText, Toast.LENGTH_LONG);
-        brot.show();
-    }
-
-
-    /**
-     * Event-Handler-Methode für CheckBoxen.<br>
-     * Einzige Methode aus dem Interface {@link CompoundButton.OnCheckedChangeListener}.
-     *
-     * @param buttonView CheckBox die Event ausgelöst hat.
-     *
-     * @param isChecked  Ist die CheckBox jetzt aktiviert oder nicht?
-     */
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-        String checkboxText = buttonView.getText().toString();
-        String toastText    = "Neuer Zustand CheckBox \"" + checkboxText +
-                              "\": " + isChecked;
-
-        Toast brot = Toast.makeText(this, toastText, Toast.LENGTH_LONG);
-        brot.show();
-    }
-
-
-    /**
-     * Methode aus Interface {@link android.widget.SeekBar.OnSeekBarChangeListener}.
-     * Absichtlich leer überschrieben.
-     *
-     * @param seekBar UI-Element, das Event ausgelöst hast.
-     *
-     * @param progress Neuer Wert
-     *
-     * @param fromUser <i>true</i> wenn die Änderung von einem Nutzer verursacht
-     *                 wurde.
-     */
-    @Override
-    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
-      // absichtlich leer gelassen
-    }
-
-
-    /**
-     * Methode aus Interface {@link android.widget.SeekBar.OnSeekBarChangeListener}.
-     * Absichtlich leer überschrieben.
-     *
-     * @param seekBar UI-Element, das Event ausgelöst hast.
-     */
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) {
-
-        // absichtlich leer gelassen
-    }
-
-
-    /**
-     * Methode aus Interface {@link android.widget.SeekBar.OnSeekBarChangeListener}.
-     * Wird aufgerufen, wenn das Einstellen eines neuen Wertes beendet ist, der Finger
-     * also vom SeekBar-Element wieder abhoben wurde.
-     * Einzige Event-Handler-Methode für das SeekBar-Element, die wirklich überschrieben
-     * wurde.
-     *
-     * @param seekBar UI-Element, das Event ausgelöst hast.
-     */
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) {
-
-        int neuerWert = seekBar.getProgress();
-
-        Toast.makeText(
-                this,
-                "Neuer Wert eingestellt: " + neuerWert,
-                Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.hinweis_backbutton ,Toast.LENGTH_SHORT).show();
+            _hinweisWurdeGezeigt  = true;
+        }
     }
 
 }

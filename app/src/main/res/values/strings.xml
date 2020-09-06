@@ -2,11 +2,61 @@
 
     <string name="app_name">Weitere UI-Elemente</string>
 
-    <string name="radiobutton_ja"  >Ja</string>
-    <string name="radiobutton_nein">Nein</string>
-    <string name="radiobutton_ka"  >Keine Angabe</string>
+    <!-- Texte für Buttons auf MainActivity -->
+    <string name="button_gehe_zu_toggle_activity">ToggleButton-Demo</string>
+    <string name="button_gehe_zu_single_choice"  >Single-Choice-Quiz</string>
+    <string name="button_gehe_zu_multi_choice"   >Multiple-Choice-Quiz</string>
+    <string name="button_gehe_zu_farbwahl"       >Farbwahl</string>
 
-    <string name="checkbox_1">Option 1</string>
-    <string name="checkbox_2">Option 2</string>
+    <string name="hinweis_backbutton">Betätigen Sie den Zurück-Button um zurück zum Hauptmenü zu gelangen.</string>
+    <string name="hinweis_unerwarteter_button">Interner Fehler: Unerwarteter Button wurde betätigt.</string>
+
+
+    <!-- Texte für ToggleButtonActivity -->
+    <string name="title_togglebutton_demo">ToggleButton-Demo</string>
+
+
+    <!-- Texte für SingleChoiceActivity -->
+    <string name="title_single_choice">Geographie-Quiz</string>
+
+    <string name="single_choice_frage_1">Welche Stadt liegt am weitesten nördlich?</string>
+    <string name="single_choice_antwort_1a">Amsterdam</string>
+    <string name="single_choice_antwort_1b">Hamburg</string><!-- richtige Antwort -->
+    <string name="single_choice_antwort_1c">London</string>
+
+    <string name="single_choice_frage_2">Welche Stadt ist die Hauptstadt von Kanada?</string>
+    <string name="single_choice_antwort_2a">Montreal</string>
+    <string name="single_choice_antwort_2b">Ottawa</string><!-- richtige Antwort -->
+    <string name="single_choice_antwort_2c">Toronto</string>
+    <string name="single_choice_antwort_2d">Vancouver</string>
+
+    <string name="button_geo_antworten_pruefen">Antworten prüfen</string>
+
+    <string name="toast_nochmal_nachdenken"    >Denken Sie nochmal nach!</string>
+    <string name="toast_unerwartete_radiogroup">Interner Fehler: Unerwartete RadioGroup hat Event ausgelöst.</string>
+    <string name="toast_fehlende_antwort"      >Bitte jede Frage beantworten!</string>
+    <string name="toast_alles_richtig"         >Alle Fragen richtig beantwortet!</string>
+    <string name="toast_nicht_richtig"         >Leider nicht richtig :-(</string>
+
+
+    <!-- Texte für MultiChoiceActivity -->
+    <string name="title_multi_choice">Musik-Quiz</string>
+
+    <string name="multi_choice_frage_1">Welche Instrumente gehören zur Familie der Holzblasinstrumente?</string>
+    <string name="multi_choice_antwort_1a">Cajón</string>
+    <string name="multi_choice_antwort_1b">Keytar</string>
+    <string name="multi_choice_antwort_1c">Saxophon</string><!-- richtige Antwort -->
+    <string name="multi_choice_antwort_1d">Schalmei</string><!-- richtige Antwort -->
+    <string name="multi_choice_antwort_1e">Theremin</string>
+
+    <string name="button_musik_antworten_pruefen">Auswahl prüfen</string>
+
+    <string name="toast_richtige_auswahl">Auswahl ist richtig :-)</string>
+    <string name="toast_falsche_auswahl" >Auswahl ist falsch :-(</string>
+
+
+    <!-- Text für FarbwahlActivity -->
+    <string name="title_farbwahl">Farbwahl</string>
+
 
 </resources>

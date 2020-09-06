@@ -1,4 +1,4 @@
-# Android-App "Weitere UI-Elements"
+# Android-App "Weitere UI-Elemente" #
 
 Android app to demonstrate several UI elements including event handling.
 
@@ -9,7 +9,7 @@ Identifiers (names for classes, variables and methods), UI texts and (JavaDoc) c
 <br>
 
 ----
-## Screenshots
+## Screenshots ##
 
 ![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
 
@@ -20,6 +20,6 @@ Identifiers (names for classes, variables and methods), UI texts and (JavaDoc) c
 <br>
 
 ----
-# License
+## License ##
 
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).

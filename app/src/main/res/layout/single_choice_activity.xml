@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <!-- Ein ScrollView-Element darf nur EIN direktes Kind-Element haben
+         (sonst crasht die Activity), deshalb kapseln wir den eigentlichen
+         Inhalt in einem LinearLayout.
+      -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/single_choice_frage_1"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/geoFrage1RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff00">
+
+            <RadioButton
+                android:id="@+id/antwort1aRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/single_choice_antwort_1a" />
+
+            <RadioButton
+                android:id="@+id/antwort1bRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/single_choice_antwort_1b" /><!-- Richtige Antwort -->
+
+            <RadioButton
+                android:id="@+id/antwort1cRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/single_choice_antwort_1c" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/single_choice_frage_2"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/geoFrage2RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff00">
+
+            <RadioButton
+                android:id="@+id/antwort2aRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/single_choice_antwort_2a" />
+
+            <RadioButton
+                android:id="@+id/antwort2bRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/single_choice_antwort_2b" /><!-- Richtige Antwort -->
+
+            <RadioButton
+                android:id="@+id/antwort2cRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/single_choice_antwort_2c" />
+
+            <RadioButton
+                android:id="@+id/antwort2dRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/single_choice_antwort_2d" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/geoAntwortenPruefButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/button_geo_antworten_pruefen"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</ScrollView>

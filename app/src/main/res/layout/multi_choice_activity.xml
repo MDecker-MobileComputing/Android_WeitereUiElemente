@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <!-- Ein ScrollView-Element darf nur EIN direktes Kind-Element haben
+         (sonst crasht die Activity), deshalb kapseln wir den eigentlichen
+         Inhalt in einem LinearLayout.
+      -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/multi_choice_frage_1"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/antwort1aCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multi_choice_antwort_1a" />
+
+        <CheckBox
+            android:id="@+id/antwort1bCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multi_choice_antwort_1b" />
+
+        <CheckBox
+            android:id="@+id/antwort1cCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multi_choice_antwort_1c" />
+
+        <CheckBox
+            android:id="@+id/antwort1dCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multi_choice_antwort_1d" />
+
+        <CheckBox
+            android:id="@+id/antwort1eCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/multi_choice_antwort_1e" />
+
+        <Button
+            android:id="@+id/musikAntwortenPruefButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/button_musik_antworten_pruefen"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</ScrollView>

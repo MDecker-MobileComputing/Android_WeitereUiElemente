@@ -21,6 +21,11 @@
             </intent-filter>
             
         </activity>
+
+        <activity android:name=".ToggleButtonActivity" />
+        <activity android:name=".SingeChoiceActivity"  />
+        <activity android:name=".MultiChoiceActivity"  />
+        <activity android:name=".FarbwahlActivity"     />
         
     </application>
 
