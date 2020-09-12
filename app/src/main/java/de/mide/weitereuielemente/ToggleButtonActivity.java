@@ -42,12 +42,10 @@ public class ToggleButtonActivity extends Activity
 
         setTitle( R.string.title_togglebutton_demo );
 
-
         _toggleButton = findViewById(R.id.meinToggleButton);
+        _progressBar  = findViewById(R.id.meinProgressBar);
+
         _toggleButton.setOnClickListener(this);
-
-        _progressBar = findViewById(R.id.meinProgressBar);
-
 
         if ( _toggleButton.isChecked() ) {
 
@@ -64,7 +62,8 @@ public class ToggleButtonActivity extends Activity
      * Event-Handler-Methode für den ToggleButton.<br>
      * Einzige Methode aus dem Interface {@link OnClickListener}.
      *
-     * @param view UI-Element, welches das Event ausgelöst hat.
+     * @param view  UI-Element, welches das Event ausgelöst hat (im vorliegenden
+     *              Fall wird dies immer der ToggleButton sein).
      */
     @Override
     public void onClick(View view) {
