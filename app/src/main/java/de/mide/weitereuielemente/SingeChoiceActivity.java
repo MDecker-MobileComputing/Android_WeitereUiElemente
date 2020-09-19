@@ -87,9 +87,10 @@ public class SingeChoiceActivity extends Activity
         }
     }
 
+    
     /**
-     * Event-Handler-Methode für Button. Es gibt nur einen Button auf der zugehörigen Activity, nämlich
-     * den zum Überprüfen der eingegebenen Ergebnisse.
+     * Event-Handler-Methode für Button. Es gibt nur einen Button auf der zugehörigen Activity,
+     * nämlich den zum Überprüfen der eingegebenen Ergebnisse.
      *
      * @param view   Button, der Event ausgelöst hat.
      */
