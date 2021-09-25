@@ -65,7 +65,6 @@ public class FarbwahlActivity extends Activity
         _gruenSeekBar.setOnSeekBarChangeListener( this );
         _blauSeekBar.setOnSeekBarChangeListener(  this );
 
-
         farbeDarstellen();
     }
 
@@ -82,7 +81,10 @@ public class FarbwahlActivity extends Activity
         int blau  = _blauSeekBar.getProgress();
 
         // Formel nach https://developer.android.com/reference/android/graphics/Color
-        int farbe = (ALPHA_WERT & 0xff) << 24 | (rot & 0xff) << 16 | (gruen & 0xff) << 8 | (blau & 0xff);
+        int farbe = (ALPHA_WERT & 0xff) << 24 |
+                           (rot & 0xff) << 16 |
+                          (gruen & 0xff) << 8 |
+                          (blau & 0xff);
 
         _farbTextView.setBackgroundColor(farbe);
 

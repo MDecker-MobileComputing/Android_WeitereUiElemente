@@ -83,7 +83,8 @@ public class SingeChoiceActivity extends Activity
 
         } else {
 
-            Toast.makeText( this, R.string.toast_unerwartete_radiogroup, Toast.LENGTH_LONG).show();
+            Toast.makeText( this, R.string.toast_unerwartete_radiogroup,
+                    Toast.LENGTH_LONG).show();
         }
     }
 
@@ -111,7 +112,8 @@ public class SingeChoiceActivity extends Activity
 
         if (checkedId1 == R.id.antwort1bRadioButton && checkedId2 == R.id.antwort2bRadioButton) {
 
-            Toast.makeText( this, R.string.toast_alles_richtig, Toast.LENGTH_LONG).show();
+            Toast.makeText( this, R.string.toast_alles_richtig, Toast.LENGTH_LONG)
+                 .show();
 
         } else {
 
