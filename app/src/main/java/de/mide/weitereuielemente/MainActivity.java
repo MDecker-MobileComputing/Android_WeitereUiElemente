@@ -75,7 +75,7 @@ public class MainActivity extends Activity
         }
         else if (view == _geheZuSingleChoiceActivityButton) {
 
-            intent = new Intent(this, SingeChoiceActivity.class);
+            intent = new Intent(this, SingleChoiceActivity.class);
             startActivity(intent);
 
         }

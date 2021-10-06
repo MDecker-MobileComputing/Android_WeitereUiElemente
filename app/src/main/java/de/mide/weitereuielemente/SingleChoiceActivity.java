@@ -16,7 +16,7 @@ import android.widget.Toast;
  *
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
-public class SingeChoiceActivity extends Activity
+public class SingleChoiceActivity extends Activity
                                  implements OnCheckedChangeListener,
                                             OnClickListener {
 
