@@ -10,7 +10,6 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
 
 
-
 /**
  * Activity zur Demonstration von RadioButtons mit SingleChoice-Fragen.
  * <br><br>
