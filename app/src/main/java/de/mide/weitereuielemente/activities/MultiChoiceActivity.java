@@ -1,4 +1,4 @@
-package de.mide.weitereuielemente;
+package de.mide.weitereuielemente.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.Toast;
+
+import de.mide.weitereuielemente.R;
 
 
 /**

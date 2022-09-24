@@ -1,4 +1,4 @@
-package de.mide.weitereuielemente;
+package de.mide.weitereuielemente.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
+
+import de.mide.weitereuielemente.R;
 
 
 /**

@@ -1,13 +1,13 @@
-package de.mide.weitereuielemente;
+package de.mide.weitereuielemente.activities;
 
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+
+import de.mide.weitereuielemente.R;
 
 
 /**

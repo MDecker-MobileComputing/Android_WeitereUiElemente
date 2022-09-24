@@ -1,16 +1,18 @@
-package de.mide.weitereuielemente;
+package de.mide.weitereuielemente.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.CompoundButton;
 import android.widget.ProgressBar;
 import android.widget.ToggleButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
+import de.mide.weitereuielemente.R;
+
+
 /**
- * Activity zur Demonstration des UI-Elements "ToggleButton" (zustandsbehafter Button,
+ * Activity zur Demonstration des UI-Elements "ToggleButton" (Button mit Zustand,
  * "Kippschalter").
  * <br><br>
  *

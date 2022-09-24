@@ -8,6 +8,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import de.mide.weitereuielemente.activities.FarbwahlActivity;
+import de.mide.weitereuielemente.activities.MultiChoiceActivity;
+import de.mide.weitereuielemente.activities.SingleChoiceActivity;
+import de.mide.weitereuielemente.activities.ToggleButtonActivity;
+
 
 /**
  * Activity mit Hauptmenü zum Absprung zu anderen Activities.
