@@ -1,7 +1,7 @@
-# Android-App "Weitere UI-Elemente" #
+<br># Android-App "Weitere UI-Elemente" #
 
 Android app to demonstrate the basic usage of the following UI elements:
-* ToggleButton 
+* ToggleButton
 * ProgressBar
 * RadioGroup and RadioButton
 * CheckBox
@@ -14,11 +14,12 @@ Identifiers (names for classes, variables and methods), UI texts and (JavaDoc) c
 <br>
 
 ----
+
 ## Screenshots ##
 
 <br>
 
-![Screenshot 1](screenshot_1.png)  
+![Screenshot 1](screenshot_1.png)
 
 <br><br>
 
@@ -39,6 +40,11 @@ Identifiers (names for classes, variables and methods), UI texts and (JavaDoc) c
 <br>
 
 ----
+
 ## License ##
 
+<br>
+
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).
+
+<br>
