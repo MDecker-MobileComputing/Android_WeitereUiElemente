@@ -1,4 +1,4 @@
-package de.mide.weitereuielemente.activities;
+package de.mide.weitere_uielemente.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.ProgressBar;
 import android.widget.ToggleButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 
-import de.mide.weitereuielemente.R;
+import de.mide.weitere_uielemente.R;
 
 
 /**

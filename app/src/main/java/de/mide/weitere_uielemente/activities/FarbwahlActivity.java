@@ -1,4 +1,4 @@
-package de.mide.weitereuielemente.activities;
+package de.mide.weitere_uielemente.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import de.mide.weitereuielemente.R;
+import de.mide.weitere_uielemente.R;
 
 
 /**
@@ -83,7 +83,7 @@ public class FarbwahlActivity extends Activity
         // Formel nach https://developer.android.com/reference/android/graphics/Color
         int farbe = (ALPHA_WERT & 0xff) << 24 |
                            (rot & 0xff) << 16 |
-                          (gruen & 0xff) << 8 |
+                         (gruen & 0xff) <<  8 |
                           (blau & 0xff);
 
         _farbTextView.setBackgroundColor(farbe);
