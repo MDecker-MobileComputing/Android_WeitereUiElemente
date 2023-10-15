@@ -1,4 +1,6 @@
-<br># Android-App "Weitere UI-Elemente" #
+# Android-App "Weitere UI-Elemente" #
+
+<br>
 
 Android app to demonstrate the basic usage of the following UI elements:
 * ToggleButton
