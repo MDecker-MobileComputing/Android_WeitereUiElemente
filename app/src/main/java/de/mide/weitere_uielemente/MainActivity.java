@@ -21,7 +21,7 @@ import de.mide.weitere_uielemente.activities.ToggleButtonActivity;
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class MainActivity extends Activity
-                          implements OnClickListener {
+        implements OnClickListener {
 
     /** Button für Navigation zu ToggleButtonActivity. */
     private Button _geheZuToggleActivityButton = null;
@@ -62,7 +62,7 @@ public class MainActivity extends Activity
 
     /**
      * Event-Handler für Button, springt zu einer anderen Activity.
-     * Beim ersten Aufruf pro App-Start wird in einem Toast ein Hinweis 
+     * Beim ersten Aufruf pro App-Start wird in einem Toast ein Hinweis
      * zur Rücknavigation angezeigt.
      *
      * @param view  Button, der das Event ausgelöst hat
@@ -76,38 +76,38 @@ public class MainActivity extends Activity
 
             intent = new Intent(this, ToggleButtonActivity.class);
             startActivity(intent);
- 
+
         } else if (view == _geheZuSingleChoiceActivityButton) {
-        
+
             intent = new Intent(this, SingleChoiceActivity.class);
             startActivity(intent);
 
         } else if (view == _geheZuMultipleChoiceActivityButton) {
-        
+
             intent = new Intent(this, MultiChoiceActivity.class);
             startActivity(intent);
 
         } else if (view == _geheZuFarbwahlButton) {
-        
+
             intent = new Intent(this, FarbwahlActivity.class);
             startActivity(intent);
 
         } else {
 
-            Toast.makeText(this, 
-                           R.string.hinweis_unerwarteter_button, 
-                           Toast.LENGTH_LONG
-                          ).show();
+            Toast.makeText(this,
+                    R.string.hinweis_unerwarteter_button,
+                    Toast.LENGTH_LONG
+            ).show();
             return;
         }
 
 
         if (_hinweisWurdeGezeigt == false) {
 
-            Toast.makeText(this, 
-                           R.string.hinweis_backbutton, 
-                           Toast.LENGTH_SHORT
-                          ).show();
+            Toast.makeText(this,
+                    R.string.hinweis_backbutton,
+                    Toast.LENGTH_SHORT
+            ).show();
             _hinweisWurdeGezeigt  = true;
         }
     }
