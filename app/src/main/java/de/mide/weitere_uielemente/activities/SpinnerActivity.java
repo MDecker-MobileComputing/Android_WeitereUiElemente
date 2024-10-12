@@ -12,7 +12,13 @@ import android.widget.Toast;
 
 import de.mide.weitere_uielemente.R;
 
-
+/**
+ * Activity zur Demonstration des UI-Elements "Spinner" (Dropdown-Liste zur Auswahl
+ * von Einträgen): es wird die Entfernung zwischen zwei Städten berechnet.
+ * <br><br>
+ *
+ * This project is licensed under the terms of the BSD 3-Clause License.
+ */
 public class SpinnerActivity extends Activity
                              implements AdapterView.OnItemSelectedListener {
 
@@ -20,17 +26,16 @@ public class SpinnerActivity extends Activity
     public record StadtRecord( String nameStadt, double longitude, double latitude) { }
 
     private StadtRecord[] staedteArray = {
-            //new StadtRecord("Bitte Stadt auswählen", 0.0, 0.0),
-            new StadtRecord( "Berlin"    , 13.404954, 52.520008 ),
-            new StadtRecord( "Hamburg"   ,  9.993682, 53.551086 ),
-            new StadtRecord( "München"   , 11.581981, 48.135124 ),
-            new StadtRecord( "Köln"      ,  6.953101, 50.937531 ),
-            new StadtRecord( "Frankfurt" ,  8.682127, 50.110924 ),
-            new StadtRecord( "Stuttgart" ,  9.181332, 48.775846 ),
-            new StadtRecord( "Düsseldorf",  6.782014, 51.227741 ),
-            new StadtRecord( "Dortmund"  ,  7.468554, 51.513992 ),
-            new StadtRecord( "Essen"     ,  7.011581, 51.455643 ),
-            new StadtRecord( "Leipzig"   , 12.387772, 51.340632 )
+            new StadtRecord("Berlin"    , 13.404954, 52.520008),
+            new StadtRecord("Dortmund"  ,  7.468554, 51.513992),
+            new StadtRecord("Düsseldorf",  6.782014, 51.227741),
+            new StadtRecord("Essen"     ,  7.011581, 51.455643),
+            new StadtRecord("Frankfurt" ,  8.682127, 50.110924),
+            new StadtRecord("Hamburg"   ,  9.993682, 53.551086),
+            new StadtRecord("Köln"      ,  6.953101, 50.937531),
+            new StadtRecord("Leipzig"   , 12.387772, 51.340632),
+            new StadtRecord("München"   , 11.581981, 48.135124),
+            new StadtRecord("Stuttgart" ,  9.181332, 48.775846)
     };
 
     private Spinner _stadt1Spinner = null;
