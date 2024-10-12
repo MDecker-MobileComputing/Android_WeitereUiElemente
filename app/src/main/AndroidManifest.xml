@@ -29,6 +29,7 @@
         <activity android:name=".activities.SingleChoiceActivity" />
         <activity android:name=".activities.MultiChoiceActivity"  />
         <activity android:name=".activities.FarbwahlActivity"     />
+        <activity android:name=".activities.SpinnerActivity"      />
 
     </application>
 

@@ -11,6 +11,7 @@ import android.widget.Toast;
 import de.mide.weitere_uielemente.activities.FarbwahlActivity;
 import de.mide.weitere_uielemente.activities.MultiChoiceActivity;
 import de.mide.weitere_uielemente.activities.SingleChoiceActivity;
+import de.mide.weitere_uielemente.activities.SpinnerActivity;
 import de.mide.weitere_uielemente.activities.ToggleButtonActivity;
 
 
@@ -35,6 +36,8 @@ public class MainActivity extends Activity
     /** Button für Navigation zur FarbwahlActivity. */
     private Button _geheZuFarbwahlButton = null;
 
+    private Button _geheZuSpinnerButton = null;
+
     /** Flag, damit Toast mit Hinweis zur Rücknavigation nur einmal pro App-Lauf angezeigt wird. */
     private boolean _hinweisWurdeGezeigt = false;
 
@@ -48,15 +51,17 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        _geheZuToggleActivityButton         = findViewById(R.id.gehe_zu_toggle_activity_button);
-        _geheZuSingleChoiceActivityButton   = findViewById(R.id.gehe_zu_single_choice_button  );
-        _geheZuMultipleChoiceActivityButton = findViewById(R.id.gehe_zu_multi_choice_button   );
-        _geheZuFarbwahlButton               = findViewById(R.id.gehe_zu_farbwahl_button       );
+        _geheZuToggleActivityButton         = findViewById( R.id.gehe_zu_toggle_activity_button );
+        _geheZuSingleChoiceActivityButton   = findViewById( R.id.gehe_zu_single_choice_button   );
+        _geheZuMultipleChoiceActivityButton = findViewById( R.id.gehe_zu_multi_choice_button    );
+        _geheZuFarbwahlButton               = findViewById( R.id.gehe_zu_farbwahl_button        );
+        _geheZuSpinnerButton                = findViewById( R.id.gehe_zu_spinner_button         );
 
-        _geheZuToggleActivityButton.setOnClickListener(         this );
-        _geheZuSingleChoiceActivityButton.setOnClickListener(   this );
+        _geheZuToggleActivityButton.setOnClickListener        ( this );
+        _geheZuSingleChoiceActivityButton.setOnClickListener  ( this );
         _geheZuMultipleChoiceActivityButton.setOnClickListener( this );
-        _geheZuFarbwahlButton.setOnClickListener(               this );
+        _geheZuFarbwahlButton.setOnClickListener              ( this );
+        _geheZuSpinnerButton.setOnClickListener               ( this );
     }
 
 
@@ -90,6 +95,11 @@ public class MainActivity extends Activity
         } else if (view == _geheZuFarbwahlButton) {
 
             intent = new Intent(this, FarbwahlActivity.class);
+            startActivity(intent);
+
+        } else if (view == _geheZuSpinnerButton) {
+
+            intent = new Intent(this, SpinnerActivity.class);
             startActivity(intent);
 
         } else {

@@ -7,6 +7,7 @@
     <string name="button_gehe_zu_single_choice"  >Single-Choice-Quiz</string>
     <string name="button_gehe_zu_multi_choice"   >Multiple-Choice-Quiz</string>
     <string name="button_gehe_zu_farbwahl"       >Farbwahl</string>
+    <string name="button_gehe_zu_spinner"        >Spinner</string>
 
     <string name="hinweis_backbutton">Betätigen Sie den Zurück-Button um zurück zum Hauptmenü zu gelangen.</string>
     <string name="hinweis_unerwarteter_button">Interner Fehler: Unerwarteter Button wurde betätigt.</string>
@@ -63,5 +64,11 @@
     <string name="label_blau" >Blau:</string>
 
     <string name="checkbox_live_aktualisieren">Farbe live aktualisieren</string>
+
+
+    <!-- Text für SpinnerActivity -->
+    <string name="spinner_default_eintrag">Bitte Stadt auswählen</string>
+    <string name="bitte_zwei_verschiedene_staedte">Bitte zwei unterschiedliche Städte auswählen</string>
+    <string name="entfernung_zwischen_staedten">Die Entfernung zwischen %1$s und %2$s beträgt %3$d km.</string>
 
 </resources>
