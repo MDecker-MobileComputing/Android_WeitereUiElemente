@@ -19,8 +19,8 @@ import de.mide.weitere_uielemente.R;
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class SingleChoiceActivity extends Activity
-                                 implements OnCheckedChangeListener,
-                                            OnClickListener {
+                                  implements OnCheckedChangeListener,
+                                             OnClickListener {
 
     /** RadioGroup mit Antwortmöglichkeiten für erste Frage (welche Stadt am weitesten nördlich?). */
     private RadioGroup _frage1RadioGroup = null;
