@@ -11,6 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import de.mide.weitere_uielemente.R;
+import de.mide.weitere_uielemente.activities.staedte.StadtLocation;
+import de.mide.weitere_uielemente.activities.staedte.StadtRecord;
+
 
 /**
  * Activity zur Demonstration des UI-Elements "Spinner" (Dropdown-Liste zur Auswahl
@@ -22,25 +25,36 @@ import de.mide.weitere_uielemente.R;
 public class SpinnerActivity extends Activity
                              implements AdapterView.OnItemSelectedListener {
 
-    /** Für die Record-Klasse musste in app/build.gradle die Java-Version auf 17 hochgedreht werden. */
-    public record StadtRecord( String nameStadt, double longitude, double latitude) { }
-
+    /**
+     * Array mit den Städten, die in den beiden Spinner-Elementen ausgewählt werden können.
+     * Es handelt sich um alle Landeshauptstädte und Stadtstaaten in Deutschland.
+     */
     private StadtRecord[] staedteArray = {
-            new StadtRecord("Berlin"    , 13.404954, 52.520008),
-            new StadtRecord("Dortmund"  ,  7.468554, 51.513992),
-            new StadtRecord("Düsseldorf",  6.782014, 51.227741),
-            new StadtRecord("Essen"     ,  7.011581, 51.455643),
-            new StadtRecord("Frankfurt" ,  8.682127, 50.110924),
-            new StadtRecord("Hamburg"   ,  9.993682, 53.551086),
-            new StadtRecord("Köln"      ,  6.953101, 50.937531),
-            new StadtRecord("Leipzig"   , 12.387772, 51.340632),
-            new StadtRecord("München"   , 11.581981, 48.135124),
-            new StadtRecord("Stuttgart" ,  9.181332, 48.775846)
+            new StadtRecord("Berlin"     , new StadtLocation(13.404954, 52.520008)),  // Stadtstaat
+            new StadtRecord("Bremen"     , new StadtLocation( 8.807165, 53.079296)),  // Stadtstaat
+            new StadtRecord("Dresden"    , new StadtLocation(13.737262, 51.050409)),  // Sachsen
+            new StadtRecord("Düsseldorf" , new StadtLocation( 6.782014, 51.227741)),  // Nordrhein-Westfalen
+            new StadtRecord("Erfurt"     , new StadtLocation(11.029961, 50.984766)),  // Thüringen
+            new StadtRecord("Hamburg"    , new StadtLocation( 9.993682, 53.551086)),  // Stadtstaat
+            new StadtRecord("Hannover"   , new StadtLocation( 9.732010, 52.375892)),  // Niedersachsen
+            new StadtRecord("Kiel"       , new StadtLocation(10.137626, 54.323293)),  // Schleswig-Holstein
+            new StadtRecord("Magdeburg"  , new StadtLocation(11.633766, 52.130574)),  // Sachsen-Anhalt
+            new StadtRecord("Mainz"      , new StadtLocation( 8.274037, 50.000000)),  // Rheinland-Pfalz
+            new StadtRecord("München"    , new StadtLocation(11.581981, 48.135124)),  // Bayern
+            new StadtRecord("Potsdam"    , new StadtLocation(13.060555, 52.398862)),  // Brandenburg
+            new StadtRecord("Saarbrücken", new StadtLocation( 7.000000, 49.233334)), // Saarland
+            new StadtRecord("Schwerin"   , new StadtLocation(11.401250, 53.635557)),  // Mecklenburg-Vorpommern
+            new StadtRecord("Stuttgart"  , new StadtLocation( 9.181332, 48.775846)),  // Baden-Württemberg
+            new StadtRecord("Wiesbaden"  , new StadtLocation( 8.240000, 50.080000))   // Hessen
     };
 
+    /** UI-Element für Auswahl der ersten Stadt. */
     private Spinner _stadt1Spinner = null;
+
+    /* UI-Element für Auswahl der ersten Stadt. */
     private Spinner _stadt2Spinner = null;
 
+    /** UI-Element für Anzeige der berechneten Entfernung. */
     private TextView _ergebnisTextView = null;
 
 
@@ -70,7 +84,7 @@ public class SpinnerActivity extends Activity
         String[] stadtNamenArray = new String[ staedteArray.length ];
         for (int i = 0; i < staedteArray.length; i++) {
 
-            stadtNamenArray[i] = staedteArray[i].nameStadt();
+            stadtNamenArray[i] = staedteArray[i].stadtName();
         }
 
         ArrayAdapter<String> adapter =
@@ -110,27 +124,15 @@ public class SpinnerActivity extends Activity
             StadtRecord stadt1 = staedteArray[pos1];
             StadtRecord stadt2 = staedteArray[pos2];
 
-            double lat1 = stadt1.latitude();
-            double lat2 = stadt2.latitude();
-
-            double lon1 = stadt1.longitude();
-            double lon2 = stadt2.longitude();
-
-            Location location1 = new Location("Dummy-Provider");
-            Location location2 = new Location("Dummy-Provider");
-
-            location1.setLatitude(lat1);
-            location1.setLongitude(lon1);
-
-            location2.setLatitude(lat2);
-            location2.setLongitude(lon2);
+            Location location1 = stadt1.location();
+            Location location2 = stadt2.location();
 
             int distanzInMetern = (int) location1.distanceTo(location2);
             int distanzInKilometer = distanzInMetern / 1000;
 
             String ergebnisStr = getString( R.string.entfernung_zwischen_staedten,
-                                            stadt1.nameStadt(),
-                                            stadt2.nameStadt(),
+                                            stadt1.stadtName(),
+                                            stadt2.stadtName(),
                                             distanzInKilometer );
             _ergebnisTextView.setText(ergebnisStr);
         }
