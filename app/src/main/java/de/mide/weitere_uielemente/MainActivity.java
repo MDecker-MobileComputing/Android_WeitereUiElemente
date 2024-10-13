@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import de.mide.weitere_uielemente.activities.HalloNameActivity;
 import de.mide.weitere_uielemente.activities.FarbwahlActivity;
 import de.mide.weitere_uielemente.activities.MultiChoiceActivity;
 import de.mide.weitere_uielemente.activities.SingleChoiceActivity;
@@ -36,7 +37,11 @@ public class MainActivity extends Activity
     /** Button für Navigation zur FarbwahlActivity. */
     private Button _geheZuFarbwahlButton = null;
 
+    /** Button für Navigation zum SpinnerActivity. */
     private Button _geheZuSpinnerButton = null;
+
+    /** Button für Navigation zum AutoCompleteTextViewActivity. */
+    private Button _geheZuHalloNameButton = null;
 
     /** Flag, damit Toast mit Hinweis zur Rücknavigation nur einmal pro App-Lauf angezeigt wird. */
     private boolean _hinweisWurdeGezeigt = false;
@@ -51,17 +56,19 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        _geheZuToggleActivityButton         = findViewById( R.id.gehe_zu_toggle_activity_button );
-        _geheZuSingleChoiceActivityButton   = findViewById( R.id.gehe_zu_single_choice_button   );
-        _geheZuMultipleChoiceActivityButton = findViewById( R.id.gehe_zu_multi_choice_button    );
-        _geheZuFarbwahlButton               = findViewById( R.id.gehe_zu_farbwahl_button        );
-        _geheZuSpinnerButton                = findViewById( R.id.gehe_zu_spinner_button         );
+        _geheZuToggleActivityButton         = findViewById( R.id.gehe_zu_toggle_activity_button  );
+        _geheZuSingleChoiceActivityButton   = findViewById( R.id.gehe_zu_single_choice_button    );
+        _geheZuMultipleChoiceActivityButton = findViewById( R.id.gehe_zu_multi_choice_button     );
+        _geheZuFarbwahlButton               = findViewById( R.id.gehe_zu_farbwahl_button         );
+        _geheZuSpinnerButton                = findViewById( R.id.gehe_zu_spinner_button          );
+        _geheZuHalloNameButton              = findViewById( R.id.gehe_zu_halloname_button        );
 
         _geheZuToggleActivityButton.setOnClickListener        ( this );
         _geheZuSingleChoiceActivityButton.setOnClickListener  ( this );
         _geheZuMultipleChoiceActivityButton.setOnClickListener( this );
         _geheZuFarbwahlButton.setOnClickListener              ( this );
         _geheZuSpinnerButton.setOnClickListener               ( this );
+        _geheZuHalloNameButton.setOnClickListener  ( this );
     }
 
 
@@ -100,6 +107,11 @@ public class MainActivity extends Activity
         } else if (view == _geheZuSpinnerButton) {
 
             intent = new Intent(this, SpinnerActivity.class);
+            startActivity(intent);
+
+        } else if ( view == _geheZuHalloNameButton) {
+
+            intent = new Intent(this, HalloNameActivity.class);
             startActivity(intent);
 
         } else {

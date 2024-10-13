@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Für jeden Buchstaben des Alphabets ein deutscher männlicher und ein weiblicher Vornamen,
+         erzeugt von GitHub Copilot -->
+    <string-array name="array_vornamen">
+        <item>Anton</item>
+        <item>Anna</item>
+        <item>Ben</item>
+        <item>Birgit</item>
+        <item>Christian</item>
+        <item>Clara</item>
+        <item>David</item>
+        <item>Diana</item>
+        <item>Emil</item>
+        <item>Emma</item>
+        <item>Felix</item>
+        <item>Franziska</item>
+        <item>Georg</item>
+        <item>Greta</item>
+        <item>Hans</item>
+        <item>Hannah</item>
+        <item>Jakob</item>
+        <item>Julia</item>
+        <item>Karl</item>
+        <item>Klara</item>
+        <item>Leon</item>
+        <item>Lena</item>
+        <item>Michael</item>
+        <item>Marie</item>
+        <item>Noah</item>
+        <item>Nina</item>
+        <item>Oskar</item>
+        <item>Olivia</item>
+        <item>Paul</item>
+        <item>Paula</item>
+        <item>Quentin</item>
+        <item>Quirin</item>
+        <item>Robert</item>
+        <item>Rebecca</item>
+        <item>Stefan</item>
+        <item>Sophia</item>
+        <item>Thomas</item>
+        <item>Tina</item>
+        <item>Uwe</item>
+        <item>Ulrike</item>
+        <item>Victor</item>
+        <item>Vera</item>
+        <item>Wilhelm</item>
+        <item>Wiebke</item>
+        <item>Xaver</item>
+        <item>Xenia</item>
+        <item>Yannick</item>
+        <item>Yara</item>
+        <item>Zeus</item>
+        <item>Zoe</item>
+    </string-array>
+</resources>

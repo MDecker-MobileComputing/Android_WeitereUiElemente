@@ -4,10 +4,11 @@
 
     <!-- Texte für Buttons auf MainActivity -->
     <string name="button_gehe_zu_toggle_activity">ToggleButton-Demo</string>
-    <string name="button_gehe_zu_single_choice"  >Single-Choice-Quiz</string>
-    <string name="button_gehe_zu_multi_choice"   >Multiple-Choice-Quiz</string>
-    <string name="button_gehe_zu_farbwahl"       >Farbwahl</string>
-    <string name="button_gehe_zu_spinner"        >Spinner</string>
+    <string name="button_gehe_zu_single_choice">Single-Choice-Quiz</string>
+    <string name="button_gehe_zu_multi_choice">Multiple-Choice-Quiz</string>
+    <string name="button_gehe_zu_farbwahl">Farbwahl</string>
+    <string name="button_gehe_zu_spinner">Spinner</string>
+    <string name="button_gehe_zu_halloname">Hallo Name</string>
 
     <string name="hinweis_backbutton">Betätigen Sie den Zurück-Button um zurück zum Hauptmenü zu gelangen.</string>
     <string name="hinweis_unerwarteter_button">Interner Fehler: Unerwarteter Button wurde betätigt.</string>
@@ -33,11 +34,11 @@
 
     <string name="button_geo_antworten_pruefen">Antworten prüfen</string>
 
-    <string name="toast_nochmal_nachdenken"    >Denken Sie nochmal nach!</string>
+    <string name="toast_nochmal_nachdenken">Denken Sie nochmal nach!</string>
     <string name="toast_unerwartete_radiogroup">Interner Fehler: Unerwartete RadioGroup hat Event ausgelöst.</string>
-    <string name="toast_fehlende_antwort"      >Bitte jede Frage beantworten!</string>
-    <string name="toast_alles_richtig"         >Alle Fragen richtig beantwortet!</string>
-    <string name="toast_nicht_richtig"         >Leider nicht richtig :-(</string>
+    <string name="toast_fehlende_antwort">Bitte jede Frage beantworten!</string>
+    <string name="toast_alles_richtig">Alle Fragen richtig beantwortet!</string>
+    <string name="toast_nicht_richtig">Leider nicht richtig :-(</string>
 
 
     <!-- Texte für MultiChoiceActivity -->
@@ -53,22 +54,30 @@
     <string name="button_musik_antworten_pruefen">Auswahl prüfen</string>
 
     <string name="toast_richtige_auswahl">Auswahl ist richtig :-)</string>
-    <string name="toast_falsche_auswahl" >Auswahl ist falsch :-(</string>
+    <string name="toast_falsche_auswahl">Auswahl ist falsch :-(</string>
 
 
-    <!-- Text für FarbwahlActivity -->
+    <!-- Texte für FarbwahlActivity -->
     <string name="title_farbwahl">Farbwahl</string>
 
-    <string name="label_rot"  >Rot:</string>
+    <string name="label_rot">Rot:</string>
     <string name="label_gruen">Grün:</string>
-    <string name="label_blau" >Blau:</string>
+    <string name="label_blau">Blau:</string>
 
     <string name="checkbox_live_aktualisieren">Farbe live aktualisieren</string>
 
 
-    <!-- Text für SpinnerActivity -->
+    <!-- Texte für SpinnerActivity -->
     <string name="spinner_default_eintrag">Bitte Stadt auswählen</string>
     <string name="bitte_zwei_verschiedene_staedte">Bitte zwei unterschiedliche Städte auswählen</string>
     <string name="entfernung_zwischen_staedten">Die Entfernung zwischen %1$s und %2$s beträgt %3$d km.</string>
+
+
+    <!-- Texte für HalloNameActivity -->
+    <string name="hint_vornamen">Vorname eingeben</string>
+    <string name="button_begruesse_mich">Begrüße mich</string>
+    <string name="toast_vorname_leer">Bitte Vorname eingeben!</string>
+    <string name="button_weiter">Weiter</string>
+    <string name="hallo_plus_Platzhalter">Hallo %1$s!</string>
 
 </resources>

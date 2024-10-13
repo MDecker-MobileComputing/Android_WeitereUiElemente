@@ -49,4 +49,12 @@
         android:text="@string/button_gehe_zu_spinner"
         android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/gehe_zu_halloname_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/button_gehe_zu_halloname"
+        android:textSize="20sp" />
+
 </LinearLayout>

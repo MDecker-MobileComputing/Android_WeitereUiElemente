@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto">
 
@@ -14,22 +15,28 @@
         android:theme="@style/Theme.UIElemente"
         tools:targetApi="31">
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+        <activity android:name=".MainActivity" android:exported="true">
 
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
 
         </activity>
 
         <activity android:name=".activities.ToggleButtonActivity" />
+
         <activity android:name=".activities.SingleChoiceActivity" />
-        <activity android:name=".activities.MultiChoiceActivity"  />
-        <activity android:name=".activities.FarbwahlActivity"     />
-        <activity android:name=".activities.SpinnerActivity"      />
+
+        <activity android:name=".activities.MultiChoiceActivity" />
+
+        <activity android:name=".activities.FarbwahlActivity" />
+
+        <activity android:name=".activities.SpinnerActivity" />
+
+        <activity android:name=".activities.HalloNameActivity" />
 
     </application>
 
