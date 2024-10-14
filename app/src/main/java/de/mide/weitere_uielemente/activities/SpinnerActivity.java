@@ -140,12 +140,12 @@ public class SpinnerActivity extends Activity
 
 
     /**
-     * Event-Handler-Methode für Spinner-Elemente:
+     * Event-Handler-Methode für Spinner-Elemente wenn kein Element ausgewählt ist.
      */
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
-        Toast.makeText(this, "Nix ausgewählt", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Nichts ausgewählt", Toast.LENGTH_SHORT).show();
     }
 
 }

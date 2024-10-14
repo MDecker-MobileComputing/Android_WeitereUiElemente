@@ -26,6 +26,7 @@ import android.location.Location;
 public class StadtLocation extends Location {
 
     /**
+     * Konstruktor, der nur die Geo-Koordinaten für eine übergeben bekommt.
      *
      * @param geoLaenge Längengrad in Dezimalkoordinaten (für "Westlich" negative Werte,
      *                  für "Östlich" positive Werte)

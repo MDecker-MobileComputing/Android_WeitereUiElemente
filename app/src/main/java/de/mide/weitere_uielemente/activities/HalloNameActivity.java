@@ -49,7 +49,7 @@ public class HalloNameActivity extends Activity implements View.OnClickListener 
     private void initAutoCompleteTextView() {
 
         _autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
-        _autoCompleteTextView.setThreshold(2);
+        _autoCompleteTextView.setThreshold(2); // erst ab 2 Zeichen gibt es Vorschläge
 
         String[] vornamenArray = getResources().getStringArray(R.array.array_vornamen);
         ArrayAdapter<String> adapter =
