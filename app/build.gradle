@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace 'de.mide.weitere_uielemente'
-    compileSdk 34
+    namespace 'de.mide.android.weitereui_elemente'
+    compileSdk 36
 
     defaultConfig {
-        applicationId "de.mide.weitere_uielemente"
+        applicationId "de.mide.android.weitereui_elemente"
         minSdk 24
-        targetSdk 34
+        targetSdk 36
         versionCode 1
         versionName "1.0"
 

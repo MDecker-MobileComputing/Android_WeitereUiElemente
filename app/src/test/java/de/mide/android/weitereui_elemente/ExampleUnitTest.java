@@ -1,4 +1,4 @@
-package de.mide.weitere_uielemente;
+package de.mide.android.weitereui_elemente;
 
 import org.junit.Test;
 

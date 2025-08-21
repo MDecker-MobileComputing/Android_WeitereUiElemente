@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UI-Elemente"
+rootProject.name = "Weitere UI-ElementeMy Application"
 include ':app'

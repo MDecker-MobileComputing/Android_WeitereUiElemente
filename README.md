@@ -9,6 +9,8 @@ Mit der App sollen die folgenden UI-Elemente demonstriert werden:
 * RadioGroup and RadioButton
 * CheckBox
 * SeekBar
+* Spinner
+* AutoCompleteTextView
 
 <br>
 

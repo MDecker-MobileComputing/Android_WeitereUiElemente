@@ -1,4 +1,4 @@
-package de.mide.weitere_uielemente.activities;
+package de.mide.android.weitereui_elemente.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-import de.mide.weitere_uielemente.R;
+import de.mide.android.weitereui_elemente.R;
 
 
 /**
@@ -17,7 +17,7 @@ import de.mide.weitere_uielemente.R;
  * This project is licensed under the terms of the BSD 3-Clause License.
  */
 public class FarbwahlActivity extends Activity
-                              implements OnSeekBarChangeListener {
+        implements OnSeekBarChangeListener {
 
     /** Alpha-Wert (Transparenz) für Farbe; 0xff=255 entspricht voller Deckkraft. */
     private static final int ALPHA_WERT = 0xff;
@@ -82,9 +82,9 @@ public class FarbwahlActivity extends Activity
 
         // Formel nach https://developer.android.com/reference/android/graphics/Color
         int farbe = (ALPHA_WERT & 0xff) << 24 |
-                           (rot & 0xff) << 16 |
-                         (gruen & 0xff) <<  8 |
-                          (blau & 0xff);
+                (rot & 0xff) << 16 |
+                (gruen & 0xff) <<  8 |
+                (blau & 0xff);
 
         _farbTextView.setBackgroundColor(farbe);
 

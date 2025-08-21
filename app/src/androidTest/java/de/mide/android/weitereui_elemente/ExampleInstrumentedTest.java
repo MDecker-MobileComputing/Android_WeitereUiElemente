@@ -1,4 +1,4 @@
-package de.mide.weitere_uielemente;
+package de.mide.android.weitereui_elemente;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("de.mide.weitere_uielemente", appContext.getPackageName());
+        assertEquals("de.mide.android.weitereui_elemente", appContext.getPackageName());
     }
 }

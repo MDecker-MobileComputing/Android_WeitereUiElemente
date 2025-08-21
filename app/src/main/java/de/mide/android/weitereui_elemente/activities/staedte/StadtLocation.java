@@ -1,4 +1,4 @@
-package de.mide.weitere_uielemente.activities.staedte;
+package de.mide.android.weitereui_elemente.activities.staedte;
 
 import android.location.Location;
 

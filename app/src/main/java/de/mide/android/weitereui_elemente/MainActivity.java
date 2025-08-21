@@ -1,4 +1,4 @@
-package de.mide.weitere_uielemente;
+package de.mide.android.weitereui_elemente;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,15 +8,16 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-import de.mide.weitere_uielemente.activities.HalloNameActivity;
-import de.mide.weitere_uielemente.activities.FarbwahlActivity;
-import de.mide.weitere_uielemente.activities.MultiChoiceActivity;
-import de.mide.weitere_uielemente.activities.SingleChoiceActivity;
-import de.mide.weitere_uielemente.activities.SpinnerActivity;
-import de.mide.weitere_uielemente.activities.ToggleButtonActivity;
+import de.mide.android.weitereui_elemente.activities.FarbwahlActivity;
+import de.mide.android.weitereui_elemente.activities.HalloNameActivity;
+import de.mide.android.weitereui_elemente.activities.MultiChoiceActivity;
+import de.mide.android.weitereui_elemente.activities.SingleChoiceActivity;
+import de.mide.android.weitereui_elemente.activities.SpinnerActivity;
+import de.mide.android.weitereui_elemente.activities.ToggleButtonActivity;
 
 
 /**
+ *
  * Activity mit Hauptmenü zum Absprung zu anderen Activities.
  * <br><br>
  *
