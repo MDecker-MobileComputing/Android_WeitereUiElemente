@@ -2,16 +2,13 @@
 
 <br>
 
-Android app to demonstrate the basic usage of the following UI elements:
+Dieses Repo enthält eine Android-Studio-Projekt für eine native Android-App mit Java.
+Mit der App sollen die folgenden UI-Elemente demonstriert werden:
 * ToggleButton
 * ProgressBar
 * RadioGroup and RadioButton
 * CheckBox
 * SeekBar
-
-<br>
-
-Identifiers (names for classes, variables and methods), UI texts and (JavaDoc) comments are in German only.
 
 <br>
 
