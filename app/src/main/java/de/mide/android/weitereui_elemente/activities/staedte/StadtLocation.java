@@ -34,7 +34,7 @@ public class StadtLocation extends Location {
      * @param geoBreite Breitengrad in Dezimalkoordinaten (für "Nördlich" negative Werte,
      *                  für "Südlich" positive Werte)
      */
-    public StadtLocation(double geoLaenge, double geoBreite) {
+    public StadtLocation( double geoLaenge, double geoBreite ) {
 
         super("Dummy-Provider");
 
