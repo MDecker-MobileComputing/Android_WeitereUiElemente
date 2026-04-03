@@ -70,7 +70,7 @@
     <!-- Texte für SpinnerActivity -->
     <string name="spinner_default_eintrag">Bitte Stadt auswählen</string>
     <string name="bitte_zwei_verschiedene_staedte">Bitte zwei unterschiedliche Städte auswählen</string>
-    <string name="entfernung_zwischen_staedten">Die Entfernung zwischen %1$s und %2$s beträgt %3$d km.</string>
+    <string name="entfernung_zwischen_staedten">Die Entfernung (Luftlinie) zwischen %1$s und %2$s beträgt %3$d km.</string>
 
 
     <!-- Texte für HalloNameActivity -->
