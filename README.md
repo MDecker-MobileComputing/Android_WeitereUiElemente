@@ -22,27 +22,27 @@ Mit der App sollen die folgenden UI-Elemente demonstriert werden:
 
 ![Screenshot 1](screenshot_1.png)
 
-<br><br>
+<br>
 
 ![Screenshot 2](screenshot_2.png)
 
-<br><br>
+<br>
 
 ![Screenshot 3](screenshot_3.png) 
 
-<br><br>
+<br>
 
 ![Screenshot 5](screenshot_5.png)
 
-<br><br>
+<br>
 
 ![Screenshot 6](screenshot_6.png)
 
-<br><br>
+<br>
 
 ![Screenshot 7](screenshot_7.png)
 
-<br><br>
+<br>
 
 ----
 
