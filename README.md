@@ -28,7 +28,7 @@ Mit der App sollen die folgenden UI-Elemente demonstriert werden:
 
 <br><br>
 
-![Screenshot 3](screenshot_3.png)  ![Screenshot 4](screenshot_4.png)
+![Screenshot 3](screenshot_3.png) 
 
 <br><br>
 
@@ -38,7 +38,11 @@ Mit der App sollen die folgenden UI-Elemente demonstriert werden:
 
 ![Screenshot 6](screenshot_6.png)
 
-<br>
+<br><br>
+
+![Screenshot 7](screenshot_7.png)
+
+<br><br>
 
 ----
 
