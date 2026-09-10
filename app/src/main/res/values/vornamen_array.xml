@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Für jeden Buchstaben des Alphabets ein deutscher männlicher und ein weiblicher Vornamen,
-         erzeugt von GitHub Copilot -->
+    <!--
+         Für jeden Buchstaben des Alphabets ein deutscher männlicher und ein weiblicher Vornamen,
+         erzeugt von GitHub Copilot
+      -->
     <string-array name="array_vornamen">
         <item>Anton</item>
         <item>Anna</item>
