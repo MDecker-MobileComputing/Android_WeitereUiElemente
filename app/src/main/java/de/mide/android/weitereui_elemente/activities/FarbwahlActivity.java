@@ -82,9 +82,9 @@ public class FarbwahlActivity extends Activity
 
         // Formel nach https://developer.android.com/reference/android/graphics/Color
         int farbe = (ALPHA_WERT & 0xff) << 24 |
-                (rot & 0xff) << 16 |
-                (gruen & 0xff) <<  8 |
-                (blau & 0xff);
+                           (rot & 0xff) << 16 |
+                         (gruen & 0xff) <<  8 |
+                          (blau & 0xff);
 
         _farbTextView.setBackgroundColor(farbe);
 
